@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wordly - My Dictionary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Wordly Dictionary</h1>
+    <p>Search any word to see its meaning</p>
+
+    <form id="search-form">
+        <input type="text" id="word-input" placeholder="type a word like hello" required>
+        <button type="submit" id="search-btn">Search</button>
+    </form>
+
+    <button id="theme-btn">Change Theme</button>
+
+    <div id="error-msg" class="hide"></div>
+
+    <div id="result" class="hide">
+        <h2 id="word"></h2>
+        <p id="phonetic"></p>
+        <p id="part-of-speech"></p>
+        <p id="definition"></p>
+        <p id="example"></p>
+        <p><strong>Synonyms:</strong> <span id="synonyms"></span></p>
+        <a id="source" target="_blank">View Source</a>
+        <br><br>
+        <button id="save-btn">Save this word</button>
+    </div>
+
+    <div id="saved-words">
+        <h3>My Saved Words</h3>
+        <ul id="saved-list"></ul>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
