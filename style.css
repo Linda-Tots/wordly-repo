@@ -1,62 +1,82 @@
-body {
+* {
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
-    padding: 20px;
+}
+
+body {
     max-width: 700px;
-    margin: auto;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f9f9f9;
 }
 
 h1 {
     text-align: center;
 }
 
-form {
-    text-align: center;
-    margin: 20px 0;
+#search-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 
-input {
-    padding: 10px;
-    width: 200px;
+#word-input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
 }
 
 button {
-    padding: 10px 15px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #3498db;
+    color: white;
     cursor: pointer;
-    margin: 5px;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+button:disabled {
+    background: #ccc;
 }
 
 #result {
-    border: 1px solid #ccc;
-    padding: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
     margin-top: 20px;
-    border-radius: 8px;
-    background: #f9f9f9;
 }
 
 #error-msg {
-    color: red;
-    text-align: center;
-    margin-top: 15px;
-    background: #ffe6e6;
-    padding: 10px;
+    background: #fdecea;
+    color: #b71c1c;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+#saved-list li {
+    background: #fff3cd;
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    list-style: none;
 }
 
 .hide {
     display: none;
 }
 
-.saved-word {
-    background: yellow; /* highlighting saved words */
-}
-
 .dark-mode {
-    background-color: #222;
+    background: #1e1e1e;
     color: white;
 }
 
 .dark-mode #result {
-    background: #333;
-    color: white;
+    background: #2c2c2c;
 }
